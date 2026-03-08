@@ -194,7 +194,6 @@ nav a:hover {
 .skill-cont {
   max-width: 1140px;
   margin: 0 auto;
-  height: 578px;
 }
 
 .text-cont {
@@ -220,12 +219,14 @@ nav a:hover {
 .skill {
   display: flex;
   margin-top: 50px;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .all-skills {
   max-width: 267px;
+  flex: 0 1 267px;
   padding: 40px;
   border-radius: 5px;
   color: #181818;
@@ -236,6 +237,12 @@ nav a:hover {
   width: 42px;
   height: 42px;
   margin-bottom: 20px;
+}
+
+.all-skills .skill-icon {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #ff7a00;
 }
 
 .all-skills h3 {

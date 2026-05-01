@@ -19,67 +19,56 @@ const funFacts = [
 
 export default function AboutSection() {
   return (
-    <section id="about" style={{ padding: "100px 24px", position: "relative" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div style={{ marginBottom: "64px" }}>
-          <p className="section-label" style={{ marginBottom: "16px" }}>About Me</p>
-          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
+    <section id="about" className="py-25 px-6 relative">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-16">
+          <p className="section-label mb-4">About Me</p>
+          <h2 className="text-[clamp(2rem,4vw,3rem)]">
             Passionate about crafting{" "}
             <span className="gradient-text">digital experiences</span>
           </h2>
         </div>
 
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "60px", alignItems: "center" }}>
+        <div className="flex flex-wrap gap-15 items-center">
           {/* Photo side */}
-          <div style={{ flex: "1", minWidth: "280px", maxWidth: "400px" }}>
-            <div style={{ position: "relative" }}>
-              <div style={{
-                width: "100%", aspectRatio: "4/5", borderRadius: "20px", overflow: "hidden",
-                border: "1px solid var(--border)",
-                boxShadow: "0 40px 80px rgba(0,0,0,0.4)"
-              }}>
+          <div className="flex-1 min-w-70 max-w-100">
+            <div className="relative">
+              <div className="w-full aspect-4/5 rounded-[20px] overflow-hidden border border-border shadow-[0_40px_80px_rgba(0,0,0,0.4)]">
                 <Image
                   src="/profile.jpg"
                   alt="About photo"
                   width={400}
                   height={500}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  className="w-full h-full object-cover"
                 />
               </div>
               {/* Accent corner */}
-              <div style={{
-                position: "absolute", bottom: "-20px", right: "-20px",
-                width: "120px", height: "120px", borderRadius: "20px",
-                background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
-                opacity: 0.15, zIndex: -1
-              }} />
-              <div style={{
-                position: "absolute", top: "-16px", left: "-16px",
-                width: "80px", height: "80px", borderRadius: "16px",
-                border: "2px solid rgba(108,99,255,0.3)", zIndex: -1
-              }} />
+              <div className="absolute -bottom-5 -right-5 w-30 h-30 rounded-[20px] opacity-[0.15] -z-10 bg-linear-135 from-accent to-accent-2" />
+              <div className="absolute -top-4 -left-4 w-20 h-20 rounded-2xl border-2 border-[rgba(108,99,255,0.3)] -z-10" />
             </div>
           </div>
 
           {/* Text side */}
-          <div style={{ flex: "1.5", minWidth: "300px" }}>
-            <p style={{ color: "var(--muted)", fontSize: "1.05rem", lineHeight: 1.9, marginBottom: "32px" }}>
+          <div className="flex-[1.5] min-w-75">
+            <p className="text-[1.05rem] text-muted leading-[1.9] mb-8">
               {personalInfo.bio}
             </p>
-            <p style={{ color: "var(--muted)", fontSize: "1.05rem", lineHeight: 1.9, marginBottom: "40px" }}>
-              When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open source, or sharing knowledge through my blog. I believe in writing clean, maintainable code that makes a real difference.
+            <p className="text-[1.05rem] text-muted leading-[1.9] mb-10">
+              When I&apos;m not coding, you&apos;ll find me exploring new
+              technologies, contributing to open source, or sharing knowledge
+              through my blog. I believe in writing clean, maintainable code
+              that makes a real difference.
             </p>
 
             {/* Fun facts */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px", marginBottom: "40px" }}>
+            <div className="grid grid-cols-2 gap-3 mb-10">
               {funFacts.map((fact, i) => (
-                <div key={i} style={{
-                  display: "flex", alignItems: "center", gap: "12px",
-                  padding: "14px 16px", borderRadius: "12px",
-                  background: "var(--surface)", border: "1px solid var(--border)"
-                }}>
-                  <span style={{ color: "var(--accent)", flexShrink: 0 }}>{fact.icon}</span>
-                  <span style={{ color: "var(--muted)", fontSize: "0.85rem" }}>{fact.text}</span>
+                <div
+                  key={i}
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl bg-surface border border-border"
+                >
+                  <span className="text-accent shrink-0">{fact.icon}</span>
+                  <span className="text-muted text-[0.85rem]">{fact.text}</span>
                 </div>
               ))}
             </div>
@@ -91,16 +80,18 @@ export default function AboutSection() {
         </div>
 
         {/* Stats */}
-        <div style={{
-          display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
-          gap: "24px", marginTop: "80px"
-        }}>
+        <div
+          className="grid gap-6 mt-20"
+          style={{
+            gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+          }}
+        >
           {stats.map((s, i) => (
-            <div key={i} className="glow-card" style={{ padding: "32px 24px", textAlign: "center" }}>
-              <div style={{ fontSize: "2.5rem", fontFamily: "'Syne', sans-serif", fontWeight: 800 }} className="gradient-text">
+            <div key={i} className="glow-card text-center py-8 px-6">
+              <div className="gradient-text text-[2.5rem] font-syne font-extrabold">
                 {s.value}
               </div>
-              <div style={{ color: "var(--muted)", fontSize: "0.85rem", marginTop: "8px" }}>{s.label}</div>
+              <div className="text-muted text-[0.85rem] mt-2">{s.label}</div>
             </div>
           ))}
         </div>

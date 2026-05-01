@@ -151,6 +151,23 @@ pre {
     linear-gradient(90deg, rgba(108, 99, 255, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
+
+.hero-accent {
+  background: radial-gradient(
+    circle,
+    rgba(108, 99, 255, 0.12) 0%,
+    transparent 70%
+  );
+}
+
+.hero-accent-2 {
+  background: radial-gradient(
+    circle,
+    rgba(255, 101, 132, 0.12) 0%,
+    transparent 70%
+  );
+}
+
 @keyframes float {
   0%,
   100% {

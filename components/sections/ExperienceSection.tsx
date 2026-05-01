@@ -3,49 +3,74 @@ import { Briefcase } from "lucide-react";
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" style={{ padding: "100px 24px", background: "var(--surface)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
-      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-        <div style={{ marginBottom: "64px" }}>
-          <p className="section-label" style={{ marginBottom: "16px" }}>Experience</p>
-          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
-            Where I&apos;ve{" "}
-            <span className="gradient-text">worked</span>
+    <section
+      id="experience"
+      className="py-25 px-6 bg-surface border-t border-b border-border"
+    >
+      <div className="max-w-225 mx-auto">
+        <div className="mb-16">
+          <p className="section-label mb-4">Experience</p>
+          <h2 className="text-[clamp(2rem,4vw,3rem)]">
+            Where I&apos;ve <span className="gradient-text">worked</span>
           </h2>
         </div>
 
-        <div style={{ position: "relative" }}>
+        <div className="relative">
           {/* Timeline line */}
-          <div style={{
-            position: "absolute", left: "19px", top: "12px", bottom: "12px",
-            width: "2px", background: "linear-gradient(to bottom, var(--accent), transparent)"
-          }} />
+          <div
+            className="absolute left-4.75 top-3 bottom-3 w-0.5"
+            style={{
+              background:
+                "linear-gradient(to bottom, var(--color-accent), transparent)",
+            }}
+          />
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+          <div className="flex flex-col" style={{ gap: "40px" }}>
             {experiences.map((exp, i) => (
-              <div key={i} style={{ display: "flex", gap: "32px", paddingLeft: "0" }}>
+              <div
+                key={i}
+                className="flex"
+                style={{ gap: "32px", paddingLeft: "0" }}
+              >
                 {/* Dot */}
-                <div style={{
-                  width: "40px", height: "40px", borderRadius: "50%", flexShrink: 0,
-                  background: i === 0 ? "var(--accent)" : "var(--surface-2)",
-                  border: `2px solid ${i === 0 ? "var(--accent)" : "var(--border)"}`,
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  boxShadow: i === 0 ? "0 0 20px rgba(108,99,255,0.5)" : "none"
-                }}>
-                  <Briefcase size={16} color={i === 0 ? "white" : "var(--muted)"} />
+                <div
+                  className="w-10 h-10 rounded-full shrink-0 flex items-center justify-center"
+                  style={{
+                    background:
+                      i === 0
+                        ? "var(--color-accent)"
+                        : "var(--color-surface-2)",
+                    border: `2px solid ${i === 0 ? "var(--color-accent)" : "var(--color-border)"}`,
+                    boxShadow:
+                      i === 0 ? "0 0 20px rgba(108,99,255,0.5)" : "none",
+                  }}
+                >
+                  <Briefcase
+                    size={16}
+                    color={i === 0 ? "white" : "var(--color-muted)"}
+                  />
                 </div>
 
                 {/* Content */}
-                <div className="glow-card" style={{ flex: 1, padding: "28px" }}>
-                  <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "8px", marginBottom: "8px" }}>
-                    <h3 style={{ fontSize: "1.1rem" }}>{exp.role}</h3>
-                    <span style={{
-                      fontFamily: "'JetBrains Mono', monospace", fontSize: "0.75rem",
-                      color: "var(--accent)", padding: "4px 12px", borderRadius: "100px",
-                      background: "rgba(108,99,255,0.1)", border: "1px solid rgba(108,99,255,0.2)"
-                    }}>{exp.period}</span>
+                <div className="glow-card flex-1 p-7">
+                  <div className="flex flex-wrap justify-between gap-2 mb-2">
+                    <h3 className="text-[1.1rem]">{exp.role}</h3>
+                    <span
+                      className="text-[0.75rem] font-['JetBrains Mono'] text-accent px-3 py-1 rounded-full"
+                      style={{
+                        background: "rgba(108,99,255,0.1)",
+                        border: "1px solid rgba(108,99,255,0.2)",
+                      }}
+                    >
+                      {exp.period}
+                    </span>
                   </div>
-                  <p style={{ color: "var(--accent-3)", fontSize: "0.9rem", marginBottom: "12px", fontWeight: 500 }}>{exp.company}</p>
-                  <p style={{ color: "var(--muted)", fontSize: "0.9rem", lineHeight: 1.7 }}>{exp.description}</p>
+                  <p className="text-[0.9rem] text-accent-3 mb-3 font-medium">
+                    {exp.company}
+                  </p>
+                  <p className="text-[0.9rem] text-muted leading-[1.7]">
+                    {exp.description}
+                  </p>
                 </div>
               </div>
             ))}

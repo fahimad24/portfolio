@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { personalInfo } from "@/data/portfolio";
 import { Mail, MapPin, Send } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterXIcon } from "@/components/SocialIcons";
+import { GithubIcon, LinkedinIcon, TwitterXIcon } from "../SocialIcons";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -21,79 +21,130 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" style={{ padding: "100px 24px" }}>
-      <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-        <div style={{ marginBottom: "64px", textAlign: "center" }}>
-          <p className="section-label" style={{ marginBottom: "16px", justifyContent: "center" }}>Contact</p>
-          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", marginBottom: "16px" }}>Let&apos;s work <span className="gradient-text">together</span></h2>
-          <p style={{ color: "var(--muted)", maxWidth: "500px", margin: "0 auto" }}>Have a project in mind or just want to say hello? My inbox is always open.</p>
+    <section id="contact" className="py-25 px-6">
+      <div className="max-w-250 mx-auto">
+        <div className="mb-16 text-center">
+          <p className="section-label mb-4 flex justify-center">Contact</p>
+          <h2 className="text-[clamp(2rem,4vw,3rem)] mb-4">
+            Let&apos;s work <span className="gradient-text">together</span>
+          </h2>
+          <p className="text-muted max-w-125 mx-auto">
+            Have a project in mind or just want to say hello? My inbox is always
+            open.
+          </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "40px" }}>
-          <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-10">
+          <div className="flex flex-col gap-6">
             {[
-              { icon: <Mail size={20} />, label: "Email", value: personalInfo.email, href: `mailto:${personalInfo.email}` },
-              { icon: <MapPin size={20} />, label: "Location", value: personalInfo.location, href: "#" },
+              {
+                icon: <Mail size={20} />,
+                label: "Email",
+                value: personalInfo.email,
+                href: `mailto:${personalInfo.email}`,
+              },
+              {
+                icon: <MapPin size={20} />,
+                label: "Location",
+                value: personalInfo.location,
+                href: "#",
+              },
             ].map((item, i) => (
-              <a key={i} href={item.href} className="glow-card" style={{ padding: "24px", display: "flex", alignItems: "center", gap: "16px", textDecoration: "none" }}>
-                <div style={{ width: "48px", height: "48px", borderRadius: "12px", flexShrink: 0, background: "rgba(108,99,255,0.1)", border: "1px solid rgba(108,99,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--accent)" }}>{item.icon}</div>
+              <a
+                key={i}
+                href={item.href}
+                className="glow-card p-6 flex items-center gap-4 no-underline"
+              >
+                <div className="w-12 h-12 rounded-xl shrink-0 bg-[rgba(108,99,255,0.1)] border border-[rgba(108,99,255,0.2)] flex items-center justify-center text-accent">
+                  {item.icon}
+                </div>
                 <div>
-                  <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginBottom: "4px" }}>{item.label}</div>
-                  <div style={{ color: "var(--text)", fontSize: "0.9rem" }}>{item.value}</div>
+                  <div className="text-[0.75rem] text-muted mb-1">
+                    {item.label}
+                  </div>
+                  <div className="text-text text-[0.9rem]">{item.value}</div>
                 </div>
               </a>
             ))}
-            <div style={{ display: "flex", gap: "12px" }}>
+            <div className="flex gap-3">
               {socials.map((s, i) => (
-                <a key={i} href={s.href} target="_blank" rel="noopener noreferrer"
-                  style={{ width: "44px", height: "44px", borderRadius: "12px", background: "var(--surface)", border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--muted)", transition: "all 0.2s", textDecoration: "none" }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "var(--accent)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(108,99,255,0.4)"; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "var(--muted)"; (e.currentTarget as HTMLElement).style.borderColor = "var(--border)"; }}
-                >{s.icon}</a>
+                <a
+                  key={i}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 h-11 rounded-xl bg-surface border border-border flex items-center justify-center text-muted transition-all duration-200 no-underline hover:text-accent hover:border-[rgba(108,99,255,0.4)]"
+                >
+                  {s.icon}
+                </a>
               ))}
             </div>
           </div>
 
-          <div className="glow-card" style={{ padding: "32px" }}>
+          <div className="glow-card p-8">
             {status === "sent" ? (
-              <div style={{ textAlign: "center", padding: "40px 0" }}>
-                <div style={{ fontSize: "3rem", marginBottom: "16px" }}>🎉</div>
-                <h3 style={{ marginBottom: "8px" }}>Message Sent!</h3>
-                <p style={{ color: "var(--muted)" }}>I&apos;ll get back to you soon.</p>
+              <div className="text-center py-10">
+                <div className="text-6xl mb-4">🎉</div>
+                <h3 className="mb-2">Message Sent!</h3>
+                <p className="text-muted">I&apos;ll get back to you soon.</p>
               </div>
             ) : (
-              <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+              <div className="flex flex-col gap-5">
                 {[
-                  { name: "name", label: "Your Name", placeholder: "John Doe", type: "text" },
-                  { name: "email", label: "Email Address", placeholder: "john@example.com", type: "email" },
+                  {
+                    name: "name",
+                    label: "Your Name",
+                    placeholder: "John Doe",
+                    type: "text",
+                  },
+                  {
+                    name: "email",
+                    label: "Email Address",
+                    placeholder: "john@example.com",
+                    type: "email",
+                  },
                 ].map((field) => (
                   <div key={field.name}>
-                    <label style={{ display: "block", fontSize: "0.8rem", color: "var(--muted)", marginBottom: "8px", fontFamily: "'JetBrains Mono', monospace" }}>{field.label}</label>
+                    <label className="block text-[0.8rem] text-muted mb-2 font-mono">
+                      {field.label}
+                    </label>
                     <input
                       type={field.type}
                       placeholder={field.placeholder}
                       value={form[field.name as keyof typeof form]}
-                      onChange={(e) => setForm({ ...form, [field.name]: e.target.value })}
-                      style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", background: "var(--surface-2)", border: "1px solid var(--border)", color: "var(--text)", fontSize: "0.9rem", outline: "none", transition: "border-color 0.2s", fontFamily: "'DM Sans', sans-serif" }}
-                      onFocus={(e) => (e.target as HTMLInputElement).style.borderColor = "var(--accent)"}
-                      onBlur={(e) => (e.target as HTMLInputElement).style.borderColor = "var(--border)"}
+                      onChange={(e) =>
+                        setForm({ ...form, [field.name]: e.target.value })
+                      }
+                      className="w-full px-4 py-3 rounded-[10px] bg-surface-2 border border-border text-text text-[0.9rem] outline-none transition-colors duration-200 focus:border-accent focus:outline-none"
                     />
                   </div>
                 ))}
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "var(--muted)", marginBottom: "8px", fontFamily: "'JetBrains Mono', monospace" }}>Message</label>
+                  <label className="block text-[0.8rem] text-muted mb-2 font-mono">
+                    Message
+                  </label>
                   <textarea
                     rows={5}
                     placeholder="Tell me about your project..."
                     value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", background: "var(--surface-2)", border: "1px solid var(--border)", color: "var(--text)", fontSize: "0.9rem", outline: "none", resize: "vertical", fontFamily: "'DM Sans', sans-serif", transition: "border-color 0.2s" }}
-                    onFocus={(e) => (e.target as HTMLTextAreaElement).style.borderColor = "var(--accent)"}
-                    onBlur={(e) => (e.target as HTMLTextAreaElement).style.borderColor = "var(--border)"}
+                    onChange={(e) =>
+                      setForm({ ...form, message: e.target.value })
+                    }
+                    className="w-full px-4 py-3 rounded-[10px] bg-surface-2 border border-border text-text text-[0.9rem] outline-none transition-colors duration-200 focus:border-accent focus:outline-none resize-none"
                   />
                 </div>
-                <button onClick={handleSubmit} disabled={status === "sending"} className="btn-primary" style={{ width: "100%", justifyContent: "center" }}>
-                  {status === "sending" ? "Sending..." : <><Send size={16} /> Send Message</>}
+                <button
+                  onClick={handleSubmit}
+                  disabled={status === "sending"}
+                  className="btn-primary w-full flex justify-center"
+                >
+                  {status === "sending" ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      <Send size={16} /> Send Message
+                    </>
+                  )}
                 </button>
               </div>
             )}

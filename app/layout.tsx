@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

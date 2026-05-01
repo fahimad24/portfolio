@@ -4,7 +4,12 @@ import { Download, ArrowRight, MapPin } from "lucide-react";
 
 import { personalInfo } from "@/data/portfolio";
 import { useEffect, useState } from "react";
-import { GithubIcon, LinkedinIcon, TwitterXIcon } from "../SocialIcons";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  ReactIcon,
+  TwitterXIcon,
+} from "../SocialIcons";
 
 const roles = ["Frontend Developer", "React Specialist", "Next.js Expert"];
 
@@ -59,12 +64,12 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center relative overflow-hidden "
+      className="min-h-screen flex items-center relative overflow-hidden top-16"
     >
       <div className="absolute top-[10%] right-[5%] w-150 h-150 rounded-full pointer-events-none backdrop-blur-2xl hero-accent" />
       <div className="absolute bottom-[10%] left-[5%] w-100 h-100 rounded-full hero-accent-2 pointer-events-none " />
 
-      <div className=" max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-14 ">
+      <div className=" max-w-6xl mx-auto w-full flex flex-wrap items-center justify-between gap-14 ">
         {/* Left */}
         <div className="flex-1 min-w-75 max-w-145">
           <div className="flex items-center gap-3 mb-7">
@@ -143,18 +148,19 @@ export default function HeroSection() {
                 color: "var(--muted)",
               }}
             >
-              ⚡ Next.js 15
+              ⚡ Next.js 16
             </div>
           </div>
           <div className="absolute bottom-7.5 -left-7.5 bg-surface border border-border rounded-xl px-4 py-2.5 backdrop-blur-[10px] animate-[float_5s_ease-in-out_infinite]">
             <div
+              className="flex gap-1 justify-center items-center"
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.7rem",
                 color: "var(--muted)",
               }}
             >
-              🚀 React 19
+              <ReactIcon size={28} /> React 19
             </div>
           </div>
         </div>

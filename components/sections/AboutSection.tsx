@@ -4,14 +4,14 @@ import { personalInfo } from "@/data/portfolio";
 import { Code2, Coffee, Rocket, Heart } from "lucide-react";
 
 const stats = [
-  { value: "3+", label: "Years Experience" },
-  { value: "50+", label: "Projects Done" },
-  { value: "20+", label: "Happy Clients" },
+  { value: "1+", label: "Years Experience" },
+  { value: "35+", label: "Projects Done" },
+  { value: "2+", label: "Happy Clients" },
   { value: "100%", label: "Dedication" },
 ];
 
 const funFacts = [
-  { icon: <Code2 size={18} />, text: "10,000+ lines of code written" },
+  { icon: <Code2 size={18} />, text: "5,000+ lines of code written" },
   { icon: <Coffee size={18} />, text: "Fueled by coffee & curiosity" },
   { icon: <Rocket size={18} />, text: "Always learning new tech" },
   { icon: <Heart size={18} />, text: "Passionate about clean code" },
@@ -20,7 +20,7 @@ const funFacts = [
 export default function AboutSection() {
   return (
     <section id="about" className="py-25 px-6 relative">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <p className="section-label mb-4">About Me</p>
           <h2 className="text-[clamp(2rem,4vw,3rem)]">

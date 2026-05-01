@@ -115,7 +115,7 @@ export default function ContactSection() {
                       onChange={(e) =>
                         setForm({ ...form, [field.name]: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-[10px] bg-surface-2 border border-border text-text text-[0.9rem] outline-none transition-colors duration-200 focus:border-accent focus:outline-none"
+                      className="w-full px-4 py-3 rounded-[10px] bg-surface-2 border border-border text-text text-[0.9rem] outline-none transition-colors duration-200 focus:border-accent"
                     />
                   </div>
                 ))}
@@ -130,7 +130,7 @@ export default function ContactSection() {
                     onChange={(e) =>
                       setForm({ ...form, message: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-[10px] bg-surface-2 border border-border text-text text-[0.9rem] outline-none transition-colors duration-200 focus:border-accent focus:outline-none resize-none"
+                    className="w-full px-4 py-3 rounded-[10px] bg-surface-2 border border-border text-text text-[0.9rem] outline-none transition-colors duration-200 focus:border-accent resize-none"
                   />
                 </div>
                 <button

@@ -30,7 +30,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-2 items-center">
+        <nav className="hidden lg:flex gap-2 items-center">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -61,7 +61,7 @@ export default function Navbar() {
         {/* Mobile menu btn */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden bg-none border-none text-text cursor-pointer"
+          className="lg:hidden bg-none border-none text-text cursor-pointer"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -69,7 +69,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {open && (
-        <div className="bg-[rgba(10,10,15,0.98)] backdrop-blur-lg rounded-lg mt-4 mx-6 border-b border-b-border md:hidden">
+        <div className="bg-[rgba(10,10,15,0.98)] backdrop-blur-lg rounded-lg mt-4 mx-6 border-b border-b-border px-4 lg:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}

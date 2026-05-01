@@ -41,11 +41,11 @@ export const projects = [
   },
   {
     id: "3",
-    title: "AI Chat Application",
-    description: "Intelligent chatbot application powered by OpenAI API with conversation history and user authentication.",
-    tech: ["Next.js", "OpenAI", "Better Auth", "MongoDB"],
-    github: "https://github.com",
-    live: "https://example.com",
+    title: "KeenKeeper- Friends to keep close in your life",
+    description: "A social platform to connect and share moments with friends, built with Next.js, OpenAI, Better Auth, and MongoDB.",
+    tech: ["Next.js", "OpenAI", "API"],
+    github: "https://github.com/fahimad24/Assingment-7-keen-keeper",
+    live: "https://fahimad24.github.io/Module-27-English-Janala/",
     featured: true,
     color: "#43e8b0",
   },
@@ -53,7 +53,7 @@ export const projects = [
     id: "4",
     title: "Portfolio Website",
     description: "Modern portfolio website with blog, admin panel, and CMS built with Next.js 15.",
-    tech: ["Next.js 15", "TypeScript", "MongoDB", "Better Auth"],
+    tech: ["Next.js 16", "TypeScript", "Tailwind CSS"],
     github: "https://github.com",
     live: "https://example.com",
     featured: false,
@@ -63,21 +63,16 @@ export const projects = [
 
 export const experiences = [
   {
-    company: "Tech Company",
-    role: "Senior Frontend Developer",
+    company: "Farmasitical company (LisanHut Ltd.)",
+    role: "Marketing Representative",
     period: "2023 - Present",
-    description: "Leading frontend development for enterprise SaaS products, improving performance by 40%.",
+    description: "Promoting pharmaceutical products to healthcare professionals, building relationships, and providing product information to drive sales.",
   },
   {
-    company: "Startup XYZ",
-    role: "Full Stack Developer",
-    period: "2022 - 2023",
-    description: "Built scalable web applications using React and Node.js for 50k+ users.",
+    company: "Startup With WebNGraphic",
+    role: "Full Frontend Developer",
+    period: "2025",
+    description: "Built scalable web applications using React and Next.js for Web development services.",
   },
-  {
-    company: "Agency ABC",
-    role: "Junior Developer",
-    period: "2021 - 2022",
-    description: "Developed responsive websites and web apps for various clients.",
-  },
+  
 ];

@@ -66,12 +66,12 @@ export default function HeroSection() {
       id="hero"
       className="min-h-screen flex items-center relative overflow-hidden top-16"
     >
-      <div className="absolute top-[10%] right-[5%] w-150 h-150 rounded-full pointer-events-none backdrop-blur-2xl hero-accent" />
-      <div className="absolute bottom-[10%] left-[5%] w-100 h-100 rounded-full hero-accent-2 pointer-events-none " />
+      <div className="absolute xl:top-[10%] xl:right-[5%] lg:top-[20%] lg:right-[2%] md:top-[4%] md:right-[29%] xl:w-150 xl:h-150 lg:w-100 lg:h-100 md:w-80 md:h-80 rounded-full pointer-events-none backdrop-blur-2xl hero-accent" />
+      <div className="absolute bottom-[10%] left-[5%] xl:w-100 xl:h-100 lg:w-60 lg:h-60 md:w-30 md:h-30 rounded-full hero-accent-2 pointer-events-none sm:hidden " />
 
-      <div className=" max-w-6xl mx-auto w-full flex flex-wrap items-center justify-between gap-14 ">
+      <div className=" max-w-6xl xl:px-0 md:px-10 px-5  mx-auto w-full flex flex-wrap lg:flex-row flex-col-reverse items-center justify-between gap-14  max-lg:top-16 relative">
         {/* Left */}
-        <div className="flex-1 min-w-75 max-w-145">
+        <div className="flex-1 lg:min-w-75 lg:max-w-145">
           <div className="flex items-center gap-3 mb-7">
             <div className="flex items-center gap-2 bg-[rgba(108,99,255,0.1)] border border-[rgba(108,99,255,0.2)] rounded-full px-4 py-1.5">
               <div className="w-2 h-2 rounded-full bg-accent-3" />
@@ -128,7 +128,7 @@ export default function HeroSection() {
         <div className="relative flex justify-center shrink-0">
           <div className="absolute -inset-6 rounded-full border border-glow animate-[float_4s_ease-in-out_infinite]" />
           <div className="absolute -inset-12 rounded-full border-dashed border border-[rgba(108,99,255,0.08)] animate-[float_6s_ease-in-out_infinite_reverse]" />
-          <div className="w-70 h-70 rounded-full p-1 bg-[linear-gradient(135deg,var(--accent),var(--accent-2),var(--accent-3))] shadow-[0_0_60px_rgba(108,99,255,0.3)] animate-[float_4s_ease-in-out_infinite]">
+          <div className="w-70 h-70 rounded-full p-1 bg-[linear-gradient(135deg,var(--color-accent),var(-- color-accent-2),var(--color-accent-3))] shadow-[0_0_60px_rgba(108,99,255,0.3)] animate-[float_4s_ease-in-out_infinite]">
             <div className="w-full h-full rounded-full overflow-hidden bg-surface">
               <Image
                 src="/profile.jpg"
@@ -145,7 +145,7 @@ export default function HeroSection() {
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.7rem",
-                color: "var(--muted)",
+                color: "var(--color-muted)",
               }}
             >
               ⚡ Next.js 16
@@ -157,7 +157,7 @@ export default function HeroSection() {
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.7rem",
-                color: "var(--muted)",
+                color: "var(--color-muted)",
               }}
             >
               <ReactIcon size={28} /> React 19
@@ -170,7 +170,7 @@ export default function HeroSection() {
         <span className="font-['JetBrains Mono'] text-[0.65rem] tracking-widest text-muted">
           SCROLL
         </span>
-        <div className="w-px h-10 bg-[linear-gradient(to_bottom,var(--muted),transparent)]" />
+        <div className="w-px h-10 bg-[linear-gradient(to_bottom,var(--color-muted),transparent)]" />
       </div>
     </section>
   );

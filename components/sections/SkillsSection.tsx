@@ -15,7 +15,7 @@ export default function SkillsSection() {
       id="skills"
       className="py-25 px-6 bg-surface border-t border-b border-border"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <p className="section-label mb-4">Skills & Expertise</p>
           <h2 className="text-[clamp(2rem,4vw,3rem)]">

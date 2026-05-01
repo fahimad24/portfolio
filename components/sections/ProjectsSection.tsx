@@ -9,7 +9,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="py-25 px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <p className="section-label mb-4">Projects</p>
           <h2 className="text-[clamp(2rem,4vw,3rem)]">

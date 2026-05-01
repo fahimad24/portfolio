@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-between gap-8">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-[linear-gradient(135deg,var(--accent),var(--accent-2))] flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-[linear-gradient(135deg,var(--color-accent),var(--color-accent-2))] flex items-center justify-center">
                 <Terminal size={16} color="white" />
               </div>
               <span className="font-syne font-bold text-text">
@@ -47,25 +47,11 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-border flex flex-wrap justify-between gap-3">
+        <div className="mt-8 pt-6 border-t border-border flex flex-wrap justify-center gap-3">
           <p className="text-muted text-[0.8rem]">
             © {new Date().getFullYear()} {personalInfo.name}. Built with Next.js
             16 and Tailwind CSS.
           </p>
-          <div className="flex gap-6">
-            <Link
-              href="/blog"
-              className="text-muted text-[0.8rem] no-underline"
-            >
-              Blog
-            </Link>
-            <Link
-              href="/admin"
-              className="text-muted text-[0.8rem] no-underline"
-            >
-              Admin
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

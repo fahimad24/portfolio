@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { personalInfo } from "@/data/portfolio";
 import { Code2, Coffee, Rocket, Heart } from "lucide-react";

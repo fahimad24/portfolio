@@ -1,7 +1,7 @@
-"use client";
 import { projects } from "@/data/portfolio";
 import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "../SocialIcons";
+import Image from "next/image";
 
 export default function ProjectsSection() {
   const featured = projects.filter((p) => p.featured);
@@ -29,6 +29,26 @@ export default function ProjectsSection() {
               className="glow-card p-8 relative overflow-hidden"
             >
               <div
+                className="text-[0.65rem] mb-4 opacity-70"
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  color: project.color,
+                }}
+              >
+                0{idx + 1}
+              </div>
+              {project.image && (
+                <div className="relative aspect-video w-full mb-6 rounded-md overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="200px"
+                    className="w-full h-48 object-cover mb-4 rounded-md"
+                  />
+                </div>
+              )}
+              <div
                 style={{
                   position: "absolute",
                   top: 0,
@@ -38,15 +58,7 @@ export default function ProjectsSection() {
                   background: `linear-gradient(90deg, ${project.color}, transparent)`,
                 }}
               />
-              <div
-                className="text-[0.65rem] mb-4 opacity-70"
-                style={{
-                  fontFamily: "'JetBrains Mono', monospace",
-                  color: project.color,
-                }}
-              >
-                0{idx + 1}
-              </div>
+
               <h3 className="text-[1.2rem] mb-3 text-text">{project.title}</h3>
               <p className="text-[0.9rem] text-muted leading-[1.7] mb-6">
                 {project.description}

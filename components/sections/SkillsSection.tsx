@@ -1,4 +1,3 @@
-"use client";
 import { skills } from "@/data/portfolio";
 import { Layers } from "lucide-react";
 

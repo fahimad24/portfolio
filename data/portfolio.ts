@@ -52,7 +52,7 @@ export const projects = [
   {
     id: "4",
     title: "Portfolio Website",
-    description: "Modern portfolio website with blog, admin panel, and CMS built with Next.js 15.",
+    description: "Modern portfolio website with blog, admin panel, and CMS built with Next.js 16.",
     tech: ["Next.js 16", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/fahimad24/portfolio",
     live: "https://ahmadfahim.vercel.app/",

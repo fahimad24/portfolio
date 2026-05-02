@@ -1,5 +1,3 @@
-"use client";
-import Link from "next/link";
 import { Mail, Terminal } from "lucide-react";
 import {
   GithubIcon,
@@ -7,6 +5,14 @@ import {
   TwitterXIcon,
 } from "@/components/SocialIcons";
 import { personalInfo } from "@/data/portfolio";
+
+const navLinks = [
+  { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#contact", label: "Contact" },
+];
 
 export default function Footer() {
   const socials = [
@@ -32,6 +38,19 @@ export default function Footer() {
             <p className="text-muted text-sm max-w-70">
               Building modern web experiences with passion and precision.
             </p>
+          </div>
+          <div>
+            <nav className="flex flex-wrap gap-6">
+              {navLinks.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.href}
+                  className="text-muted hover:text-accent transition-colors duration-200 no-underline"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
           </div>
           <div className="flex gap-3">
             {socials.map((s, i) => (

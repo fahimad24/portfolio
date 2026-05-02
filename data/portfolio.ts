@@ -76,3 +76,21 @@ export const experiences = [
   },
   
 ];
+
+export const education = [
+  {
+    institution: "University of Dhaka (Affiliated 7 Colleges)",
+    degree: "Bachelor of Arts(Honours) in IHC",
+    period: "2021 - 2024",
+    description: "Studied Islamic History and Culture. Gained knowledge in historical research, cultural studies, and Islamic civilization.",
+    graide: "CGPA: Incomplete",
+  },
+  {
+    institution: "SMN Khan College",
+    degree: "Higher Secondary Certificate (HSC)",
+    period: "2018 - 2019",
+    description: "Completed Higher Secondary education with a focus on humanities. Developed critical thinking and analytical skills.",
+    graide: "GPA: 4.08/5.00",
+  },
+];
+  

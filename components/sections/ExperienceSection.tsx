@@ -7,7 +7,7 @@ export default function ExperienceSection() {
       id="experience"
       className="py-25 px-6 bg-surface border-t border-b border-border"
     >
-      <div className="max-w-300 mx-auto">
+      <div id="education" className="max-w-300 mx-auto">
         <div className="mb-16 flex flex-col lg:flex-row md:justify-between gap-12"></div>
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Experience */}
@@ -154,7 +154,7 @@ export default function ExperienceSection() {
                             border: "1px solid rgba(108,99,255,0.2)",
                           }}
                         >
-                          {edu.graide}
+                          {edu.grade}
                         </span>
                       </div>
 

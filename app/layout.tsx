@@ -10,9 +10,21 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "dev.portfolio - A modern portfolio template for developers",
+  metadataBase: new URL("https://ahmadfahim.vercel.app"),
+  title: "Ahmad Fahim - Frontend Developer",
   description:
-    "Showcase your skills, projects, and experience with dev.portfolio - the modern portfolio template designed for developers. Built with Next.js 16 and Tailwind CSS, dev.portfolio offers a sleek and responsive design to help you stand out. Customize your portfolio with ease and share your work with the world.",
+    "Passionate frontend developer crafting modern web experiences. Skilled in React, Next.js, and Tailwind CSS. Let's build something amazing together!",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   icons: {
     icon: "/favicon.png",
   },
@@ -26,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jetBrainsMono.variable} ${jetBrainsMono.className}h-full antialiased`}
+      className={`${jetBrainsMono.variable} ${jetBrainsMono.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>

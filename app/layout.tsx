@@ -13,9 +13,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ahmadfahim.vercel.app"),
   title: "Ahmad Fahim - React & Next.js | TypeScript Projects",
   description:
-    "Frontend developer building modern React and Next.js projects with TypeScript. Explore my code, portfolio projects, and web development expertise ",
+    "Frontend developer building modern React and Next.js projects with TypeScript. Explore my code, portfolio projects, and web development expertise.",
   alternates: {
     canonical: "/",
+    languages: {
+      en: "/",
+      "x-default": "/",
+    },
   },
   robots: {
     index: true,

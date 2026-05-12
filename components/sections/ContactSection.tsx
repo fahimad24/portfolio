@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { personalInfo } from "@/data/portfolio";
 import { Mail, MapPin, Send } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterXIcon } from "../SocialIcons";
+import { GithubIcon, LinkedinIcon } from "../SocialIcons";
+import { FaFacebook } from "react-icons/fa6";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -17,7 +18,7 @@ export default function ContactSection() {
   const socials = [
     { href: personalInfo.github, icon: <GithubIcon size={18} /> },
     { href: personalInfo.linkedin, icon: <LinkedinIcon size={18} /> },
-    { href: personalInfo.twitter, icon: <TwitterXIcon size={18} /> },
+    { href: personalInfo.facebook, icon: <FaFacebook size={18} /> },
   ];
 
   return (

@@ -29,7 +29,7 @@ export default function SkillsSection({ skills }: { skills: SkillGroup[] }) {
         <div className="mb-16">
           <p className="section-label mb-4">Skills & Expertise</p>
           <h2 className="text-[clamp(2rem,4vw,3rem)]">
-            Technologies I <span className="gradient-text">work with</span>
+            Frontend & Web Development <span className="gradient-text">Code Stack</span>
           </h2>
         </div>
 

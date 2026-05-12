@@ -11,9 +11,9 @@ export default function ProjectsSection() {
     <section id="projects" className="py-25 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <p className="section-label mb-4">Projects</p>
+          <p className="section-label mb-4">My Code</p>
           <h2 className="text-[clamp(2rem,4vw,3rem)]">
-            Things I&apos;ve <span className="gradient-text">built</span>
+            Featured React & Next.js <span className="gradient-text">Projects</span>
           </h2>
         </div>
 

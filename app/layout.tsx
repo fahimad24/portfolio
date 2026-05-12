@@ -11,9 +11,9 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ahmadfahim.vercel.app"),
-  title: "Ahmad Fahim - Frontend Developer",
+  title: "Ahmad Fahim - React & Next.js | TypeScript Projects",
   description:
-    "Passionate frontend developer crafting modern web experiences. Skilled in React, Next.js, and Tailwind CSS. Let's build something amazing together!",
+    "Frontend developer building modern React and Next.js projects with TypeScript. Explore my code, portfolio projects, and web development expertise ",
   alternates: {
     canonical: "/",
   },
@@ -27,6 +27,31 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.png",
+  },
+  openGraph: {
+    title: "Ahmad Fahim - React & Next.js | TypeScript Projects",
+    description:
+      "Frontend developer building modern React and Next.js projects with TypeScript. Explore my code, portfolio projects, and web development expertise ",
+    url: "https://ahmadfahim.vercel.app",
+    type: "website",
+    siteName: "Ahmad Fahim Portfolio",
+    images: [
+      {
+        url: "/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ahmad Fahim - Frontend Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ahmad Fahim - React & Next.js | TypeScript Projects",
+    description:
+      "Frontend developer building modern React and Next.js projects with TypeScript. Explore my portfolio projects and web development expertise.",
+    images: ["/profile.jpg"],
+    site: "@fahimad24",
+    creator: "@fahimad24",
   },
 };
 

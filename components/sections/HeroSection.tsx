@@ -81,10 +81,17 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <h1 className="mb-6 leading-[1.05] text-[clamp(2.5rem,6vw,4.5rem)]">
+          <h1 className="mb-6 hidden leading-[1.05] text-[clamp(2.5rem,6vw,4.5rem)]">
+            <span className="gradient-text">React & Next.js</span> Developer
+            <br />
+            Building Web <span className="gradient-text">Projects</span> with
+            TypeScript
+          </h1>
+
+          <h2 className="mb-6 leading-[1.05] text-[clamp(2.5rem,6vw,4.5rem)]">
             Hi, I&apos;m <br />
             <span className="gradient-text">{personalInfo.name}</span>
-          </h1>
+          </h2>
 
           <div className="text-[clamp(1.1rem,2.5vw,1.5rem)] text-muted mb-6 min-h-[2em] font-syne font-semibold">
             <span className="gradient-text-2">{displayed}</span>

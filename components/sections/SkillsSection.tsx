@@ -1,5 +1,6 @@
-import { skills } from "@/data/portfolio";
 import { Layers } from "lucide-react";
+
+import Image from "next/image";
 
 const categoryColors: Record<string, string> = {
   Frontend: "#6c63ff",
@@ -8,7 +9,17 @@ const categoryColors: Record<string, string> = {
   Other: "#f59e0b",
 };
 
-export default function SkillsSection() {
+type SkillItem = {
+  name: string;
+  icon?: string;
+};
+
+type SkillGroup = {
+  category: string;
+  items: SkillItem[];
+};
+
+export default function SkillsSection({ skills }: { skills: SkillGroup[] }) {
   return (
     <section
       id="skills"
@@ -22,12 +33,7 @@ export default function SkillsSection() {
           </h2>
         </div>
 
-        <div
-          className="grid gap-6"
-          style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          }}
-        >
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
           {skills.map((group) => (
             <div key={group.category} className="glow-card p-8">
               <div className="flex items-center gap-3 mb-6">
@@ -42,19 +48,34 @@ export default function SkillsSection() {
                 </div>
                 <h3 className="text-[1rem] text-text">{group.category}</h3>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="grid lg:grid-cols-3 grid-cols-2 gap-4">
                 {group.items.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3.5 py-1.5 rounded-full text-[0.8rem] font-['JetBrains Mono']"
+                  <div
+                    key={skill.name}
+                    className="px-1 py-1.5 rounded-sm text-[0.8rem] font-['JetBrains Mono'] flex  gap-1 border border-border items-center"
                     style={{
                       background: `${categoryColors[group.category]}10`,
                       border: `1px solid ${categoryColors[group.category]}30`,
                       color: categoryColors[group.category],
                     }}
                   >
-                    {skill}
-                  </span>
+                    {skill.icon && (
+                      <div className=" flex items-center justify-center relative overflow-hidden">
+                        {skill.icon && (
+                          <Image
+                            src={skill.icon}
+                            alt={skill.name}
+                            width={40}
+                            height={40}
+                            className=" object-contain"
+                          />
+                        )}
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <p>{skill.name}</p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

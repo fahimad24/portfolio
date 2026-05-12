@@ -16,7 +16,7 @@ export function ReactIcon({ size = 18 }: { size?: number }) {
       fill="none"
       aria-hidden="true"
     >
-      <g stroke="currentColor" strokeWidth="1.5">
+      <g stroke="#61DAFB" strokeWidth="1.5">
         <ellipse cx="12" cy="12" rx="5.6" ry="2.4" />
         <ellipse
           cx="12"

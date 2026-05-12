@@ -32,13 +32,13 @@ export default function AboutSection() {
           {/* Photo side */}
           <div className="flex-1 min-w-70 max-w-100">
             <div className="relative">
-              <div className="w-full aspect-4/5 rounded-[20px] overflow-hidden border border-border shadow-[0_40px_80px_rgba(0,0,0,0.4)]">
+              <div className="w-full sm:aspect-4/5 rounded-[20px] overflow-hidden border border-border shadow-[0_40px_80px_rgba(0,0,0,0.4)]">
                 <Image
                   src="/profile.jpg"
                   alt="About photo"
-                  width={400}
+                  width={300}
                   height={500}
-                  className="w-full h-full object-cover"
+                  className="object-cover"
                 />
               </div>
               {/* Accent corner */}
@@ -60,11 +60,11 @@ export default function AboutSection() {
             </p>
 
             {/* Fun facts */}
-            <div className="grid grid-cols-2 gap-3 mb-10">
+            <div className="grid sm:grid-cols-2 gap-3 mb-10">
               {funFacts.map((fact, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 px-4 py-3 rounded-xl bg-surface border border-border"
+                  className="flex sm:flex-row flex-col justify-center items-center gap-3 px-4 py-3 rounded-xl bg-surface border border-border"
                 >
                   <span className="text-accent shrink-0">{fact.icon}</span>
                   <span className="text-muted text-[0.85rem]">{fact.text}</span>

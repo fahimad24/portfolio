@@ -33,7 +33,7 @@ export default function Footer() {
                 <Terminal size={16} color="white" />
               </div>
               <span className="font-syne font-bold text-text">
-                dev<span className="gradient-text">.portfolio</span>
+                Ahmad<span className="gradient-text">.Fahim</span>
               </span>
             </div>
             <p className="text-muted text-sm max-w-70">

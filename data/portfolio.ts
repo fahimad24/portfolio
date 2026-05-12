@@ -1,3 +1,5 @@
+
+
 export const personalInfo = {
   name: "Md. Tataque Rahman Fahim",
   title: "Frontend Developer",
@@ -12,10 +14,41 @@ export const personalInfo = {
 };
 
 export const skills = [
-  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
-  { category: "Backend", items: ["Node.js", "Express", "MongoDB", "REST APIs"] },
-  { category: "Tools", items: ["Git", "Github", "Vercel", "AWS", "Figma"] },
-  { category: "Other", items: ["Problem Solving", "Team Leadership", "Agile", "UI/UX Design"] },
+  { 
+    category: "Frontend", 
+    items: [
+      { name: "React", icon:"/react.png"}, 
+      { name: "Next.js", icon:"/nextjs.svg" }, 
+      { name: "TypeScript", icon:"/typescript.png" }, 
+      { name: "Tailwind CSS", icon:"/tailwindcss.svg" }, 
+      { name: "Framer Motion", icon:"/framer.svg" }
+    ] 
+  },
+  { category: "Backend", 
+    items: [
+      { name: "Node.js", icon:"/nodejs.svg" }, 
+      { name: "Express", icon:"/express.png" }, 
+      { name: "MongoDB", icon:"/mongodb2.png" }, 
+      { name: "REST APIs", icon:"/rest-api.svg" }
+    ] 
+  },
+  { category: "Tools", 
+    items: [
+      { name: "Git", icon:"/git.svg" }, 
+      { name: "Github", icon:"/github.png" }, 
+      { name: "Vercel", icon:"/vercel.svg" }, 
+      { name: "AWS", icon:"/aws.png" }, 
+      { name: "Figma", icon:"/figma.svg" }
+    ] 
+  },
+  { category: "Other", 
+    items: [
+      { name: "Problem Solving" },
+      { name: "Team Leadership" },
+      { name: "Agile" },
+      { name: "UI/UX Design" },
+    ] 
+  },
 ];
 
 export const projects = [

@@ -127,7 +127,36 @@ export default function HeroSection() {
         {/* Right - Photo */}
         <div className="relative flex justify-center shrink-0">
           <div className="absolute -inset-6 rounded-full border border-glow animate-[float_4s_ease-in-out_infinite]" />
-          <div className="absolute -inset-12 rounded-full border-dashed border border-[rgba(108,99,255,0.08)] animate-[float_6s_ease-in-out_infinite_reverse]" />
+          <div className="absolute -inset-12 rounded-full border-dashed border border-[rgba(107,99,255,0.4)] animate-[float_5s_ease-in-out_infinite_reverse]" />
+          <div className="absolute -inset-15 rounded-full border border-[rgba(108,99,255,0.2)] animate-[float_6s_ease-in-out_infinite] -rotate-12">
+            <Image src="/html.png" alt="html icon" width={70} height={70} />
+          </div>
+
+          <div className="absolute right-0 -top-20 rounded-full border border-[rgba(108,99,255,0.2)] animate-[float_6s_ease-in-out_infinite] -rotate-12">
+            <Image
+              src="/tailwindcss.png"
+              alt="tailwindcss icon"
+              width={70}
+              height={70}
+            />
+          </div>
+          <div className="absolute top-70 -left-20 rounded-full border border-[rgba(108,99,255,0.2)] animate-[float_6s_ease-in-out_infinite] rotate-12 overflow-hidden">
+            <Image
+              src="/mongodb.png"
+              alt="mongodb icon"
+              width={70}
+              height={70}
+            />
+          </div>
+          <div className="absolute top-60 -right-20 rounded-full border border-[rgba(108,99,255,0.2)] animate-[float_6s_ease-in-out_infinite] rotate-12">
+            <Image
+              src="/express.png"
+              alt="express icon"
+              width={70}
+              height={70}
+            />
+          </div>
+
           <div className="w-70 h-70 rounded-full p-1 bg-[linear-gradient(135deg,var(--color-accent),var(-- color-accent-2),var(--color-accent-3))] shadow-[0_0_60px_rgba(108,99,255,0.3)] animate-[float_4s_ease-in-out_infinite]">
             <div className="w-full h-full rounded-full overflow-hidden bg-surface">
               <Image
@@ -140,24 +169,22 @@ export default function HeroSection() {
               />
             </div>
           </div>
-          <div className="absolute top-5 -right-5 bg-surface border border-border rounded-xl px-4 py-2.5 backdrop-blur-[10px] animate-[float_3s_ease-in-out_infinite]">
+          <div className="absolute top-5 -right-5 border border-border rounded-xl px-4 py-2.5 backdrop-blur-md animate-[float_3s_ease-in-out_infinite] text-white/75">
             <div
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.7rem",
-                color: "var(--color-muted)",
               }}
             >
               ⚡ Next.js 16
             </div>
           </div>
-          <div className="absolute bottom-7.5 -left-7.5 bg-surface border border-border rounded-xl px-4 py-2.5 backdrop-blur-[10px] animate-[float_5s_ease-in-out_infinite]">
+          <div className="absolute bottom-7.5 -left-7.5 border border-border rounded-xl px-4 py-2.5 backdrop-blur-[10px] animate-[float_5s_ease-in-out_infinite] text-white/75">
             <div
               className="flex gap-1 justify-center items-center"
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.7rem",
-                color: "var(--color-muted)",
               }}
             >
               <ReactIcon size={28} /> React 19

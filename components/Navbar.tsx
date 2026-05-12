@@ -26,7 +26,7 @@ export default function Navbar() {
             <Terminal size={18} color="white" />
           </div>
           <span className="font-bold text-3xl text-text">
-            dev<span className="gradient-text ">.portfolio</span>
+            Ahmad<span className="gradient-text ">.Fahim</span>
           </span>
         </Link>
 
@@ -55,7 +55,7 @@ export default function Navbar() {
             download
             className="btn-primary py-2 px-4 text-sm font-medium"
           >
-            Resume ↓
+            Hire Me ↓
           </a>
         </nav>
 

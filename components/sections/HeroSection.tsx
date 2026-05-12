@@ -69,7 +69,7 @@ export default function HeroSection() {
       <div className="absolute xl:top-[10%] xl:right-[5%] lg:top-[20%] lg:right-[2%] md:top-[4%] md:right-[29%] xl:w-150 xl:h-150 lg:w-100 lg:h-100 md:w-80 md:h-80 rounded-full pointer-events-none backdrop-blur-2xl hero-accent" />
       <div className="absolute bottom-[10%] left-[5%] xl:w-100 xl:h-100 lg:w-60 lg:h-60 md:w-30 md:h-30 rounded-full hero-accent-2 pointer-events-none sm:hidden " />
 
-      <div className=" max-w-6xl xl:px-0 md:px-10 px-5  mx-auto w-full flex flex-wrap lg:flex-row flex-col-reverse items-center justify-between gap-14  max-lg:top-16 relative">
+      <div className=" max-w-6xl xl:px-0 md:px-10 px-5  mx-auto w-full flex flex-wrap lg:flex-row flex-col-reverse items-center justify-between md:gap-14 gap-30 max-lg:top-16 relative">
         {/* Left */}
         <div className="flex-1 lg:min-w-75 lg:max-w-145">
           <div className="flex items-center gap-3 mb-7">

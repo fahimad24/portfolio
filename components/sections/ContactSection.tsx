@@ -34,7 +34,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="flex flex-col gap-6">
             {[
               {
@@ -53,7 +53,7 @@ export default function ContactSection() {
               <a
                 key={i}
                 href={item.href}
-                className="glow-card p-6 flex items-center gap-4 no-underline"
+                className="glow-card p-6 flex items-center gap-4 no-underline md:flex-row flex-col"
               >
                 <div className="w-12 h-12 rounded-xl shrink-0 bg-[rgba(108,99,255,0.1)] border border-[rgba(108,99,255,0.2)] flex items-center justify-center text-accent">
                   {item.icon}

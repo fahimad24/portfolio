@@ -17,12 +17,7 @@ export default function ProjectsSection() {
           </h2>
         </div>
 
-        <div
-          className="grid gap-6 mb-10"
-          style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-          }}
-        >
+        <div className="grid gap-6 mb-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
           {featured.map((project, idx) => (
             <div
               key={project.id}

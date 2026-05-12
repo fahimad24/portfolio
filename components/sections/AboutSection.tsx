@@ -32,11 +32,11 @@ export default function AboutSection() {
           {/* Photo side */}
           <div className="flex-1 min-w-70 max-w-100">
             <div className="relative">
-              <div className="w-full sm:aspect-4/5 rounded-[20px] overflow-hidden border border-border shadow-[0_40px_80px_rgba(0,0,0,0.4)]">
+              <div className="w-full aspect-4/5  rounded-[20px] overflow-hidden border border-border shadow-[0_40px_80px_rgba(0,0,0,0.4)]">
                 <Image
                   src="/profile.jpg"
                   alt="About photo"
-                  width={300}
+                  width={400}
                   height={500}
                   className="object-cover"
                 />
@@ -48,11 +48,11 @@ export default function AboutSection() {
           </div>
 
           {/* Text side */}
-          <div className="flex-[1.5] min-w-75">
+          <div className="flex-[1.5] sm:min-w-75">
             <p className="text-[1.05rem] text-muted leading-[1.9] mb-8">
               {personalInfo.bio}
             </p>
-            <p className="text-[1.05rem] text-muted leading-[1.9] mb-10">
+            <p className="text-[1.05rem] text-muted leading-[1.9] mb-10 border-spacing-5 border-l-2 border-border pl-4">
               When I&apos;m not coding, you&apos;ll find me exploring new
               technologies, contributing to open source, or sharing knowledge
               through my blog. I believe in writing clean, maintainable code

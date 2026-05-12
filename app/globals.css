@@ -20,8 +20,6 @@ body {
   background: var(--color-bgcolor);
   color: var(--color-text);
   font-family: "DM Sans", sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
 }
 h1,
 h2,

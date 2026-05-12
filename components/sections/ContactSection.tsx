@@ -94,13 +94,13 @@ export default function ContactSection() {
                   {
                     name: "name",
                     label: "Your Name",
-                    placeholder: "John Doe",
+                    placeholder: "Enter your name",
                     type: "text",
                   },
                   {
                     name: "email",
                     label: "Email Address",
-                    placeholder: "john@example.com",
+                    placeholder: "Enter your email",
                     type: "email",
                   },
                 ].map((field) => (

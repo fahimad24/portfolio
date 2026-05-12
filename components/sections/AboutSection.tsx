@@ -18,7 +18,7 @@ const funFacts = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-25 px-6 relative">
+    <section id="about" className="lg:py-25 md:py-15 py-10  px-6 relative">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <p className="section-label mb-4">About Me</p>

@@ -60,7 +60,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center relative overflow-hidden top-16"
+      className=" flex items-center relative overflow-hidden mt-32 lg:mb-16 md:mb-10 mb-6"
     >
       <div className="absolute xl:top-[10%] xl:right-[5%] lg:top-[20%] lg:right-[2%] md:top-[4%] md:right-[29%] xl:w-150 xl:h-150 lg:w-100 lg:h-100 md:w-80 md:h-80 rounded-full pointer-events-none backdrop-blur-2xl hero-accent" />
       <div className="absolute bottom-[10%] left-[5%] xl:w-100 xl:h-100 lg:w-60 lg:h-60 md:w-30 md:h-30 rounded-full hero-accent-2 pointer-events-none sm:hidden " />
@@ -82,7 +82,7 @@ export default function HeroSection() {
           </div>
 
           <h1 className="mb-6 leading-[1.05] text-[clamp(2.5rem,6vw,4.5rem)]">
-            Hi, I&apos;m{" "}
+            Hi, I&apos;m <br />
             <span className="gradient-text">{personalInfo.name}</span>
           </h1>
 

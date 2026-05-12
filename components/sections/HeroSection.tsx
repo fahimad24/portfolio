@@ -1,15 +1,11 @@
 "use client";
 import Image from "next/image";
 import { Download, ArrowRight, MapPin } from "lucide-react";
+import { FaFacebook } from "react-icons/fa6";
 
 import { personalInfo } from "@/data/portfolio";
 import { useEffect, useState } from "react";
-import {
-  GithubIcon,
-  LinkedinIcon,
-  ReactIcon,
-  TwitterXIcon,
-} from "../SocialIcons";
+import { GithubIcon, LinkedinIcon, ReactIcon } from "../SocialIcons";
 
 const roles = ["Frontend Developer", "React Specialist", "Next.js Expert"];
 
@@ -55,9 +51,9 @@ export default function HeroSection() {
       label: "LinkedIn",
     },
     {
-      href: personalInfo.twitter,
-      icon: <TwitterXIcon size={18} />,
-      label: "Twitter",
+      href: personalInfo.facebook,
+      icon: <FaFacebook />,
+      label: "Facebook",
     },
   ];
 
@@ -193,7 +189,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 sm:flex flex-col items-center gap-2 opacity-50 hidden">
         <span className="font-['JetBrains Mono'] text-[0.65rem] tracking-widest text-muted">
           SCROLL
         </span>

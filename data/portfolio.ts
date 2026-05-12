@@ -1,5 +1,6 @@
 
 
+
 export const personalInfo = {
   name: "Md. Tataque Rahman Fahim",
   title: "Frontend Developer",
@@ -8,6 +9,7 @@ export const personalInfo = {
   github: "https://github.com/fahimad24",
   linkedin: "https://www.linkedin.com/in/ahmad-fahim4/",
   twitter: "https://twitter.com/yourusername",
+  facebook: "https://www.facebook.com/ahmadfahim4",
   location: "Rishikesh das road,Sutrapur,Dhaka-1100, Bangladesh",
   bio: "I'm a passionate Frontend Developer who loves building scalable web applications. I specialize in React, Next.js, and modern web technologies. I enjoy solving complex problems and creating beautiful user experiences.",
   resumeUrl: "/resume.pdf",

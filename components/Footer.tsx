@@ -1,10 +1,7 @@
 import { Mail, Terminal } from "lucide-react";
-import {
-  GithubIcon,
-  LinkedinIcon,
-  TwitterXIcon,
-} from "@/components/SocialIcons";
+import { GithubIcon, LinkedinIcon } from "@/components/SocialIcons";
 import { personalInfo } from "@/data/portfolio";
+import { FaFacebook } from "react-icons/fa6";
 
 const navLinks = [
   { href: "/#about", label: "About" },
@@ -19,7 +16,7 @@ export default function Footer() {
   const socials = [
     { href: personalInfo.github, icon: <GithubIcon size={18} /> },
     { href: personalInfo.linkedin, icon: <LinkedinIcon size={18} /> },
-    { href: personalInfo.twitter, icon: <TwitterXIcon size={18} /> },
+    { href: personalInfo.facebook, icon: <FaFacebook size={18} /> },
     { href: `mailto:${personalInfo.email}`, icon: <Mail size={18} /> },
   ];
 
@@ -69,8 +66,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 pt-6 border-t border-border flex flex-wrap justify-center gap-3">
           <p className="text-muted text-[0.8rem]">
-            © {new Date().getFullYear()} {personalInfo.name}. Built with Next.js
-            16 and Tailwind CSS.
+            © {new Date().getFullYear()} Ahmad Fahim. All rights reserved.
           </p>
         </div>
       </div>
